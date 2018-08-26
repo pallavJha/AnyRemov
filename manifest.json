@@ -1,7 +1,7 @@
  {
-     "name": "Getting Started Example",
+     "name": "AnyRemove",
      "version": "1.0",
-     "description": "Build an Extension!",
+     "description": "Remove those HTML elements which you don't like, like, big headers or footers, just copy the selector of the element and insert that into the app and its done!",
      "permissions": ["activeTab", "declarativeContent", "storage", "unlimitedStorage", "tabs"],
      "background": {
          "scripts": ["background.js"],
