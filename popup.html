@@ -3,7 +3,7 @@
   <head>
     <style>
     body {
-    min-width:300px;
+    min-width:500px;
     }
     table {
     font-family: arial, sans-serif;
@@ -18,10 +18,31 @@
     tr:nth-child(even) {
     border: 0px solid #dddddd;
     }
-    button {
-    height: 30px;
-    width: 30px;
-    outline: none;
+    
+    td.allCollections
+    {
+    table-layout:fixed;
+    width:100px;
+    overflow:hidden;
+    word-wrap:break-word;
+    }
+    .delete_button
+    {
+    background-color: #f49542;
+    margin-left: 15px
+    }
+    .edit_button
+    {
+    background-color: #42b3f4;
+    }
+    .action_button{
+    background-color: #e7e7e7; color: black;
+    }
+    .button {
+    margin-right: 3px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    border-radius: 5px;
     }
     </style>
   </head>
@@ -36,6 +57,7 @@
           <tr>
             <td>
               <input type="text" value="" id="host">
+              <input type="button" class="button action_button" value="Fetch!" id="fetchHostNameButton" title="Fetches current host name.">
             </td>
             <td>
               <input type="text" value="" id="selectors">
@@ -43,18 +65,28 @@
           </tr>
           <tr>
             <td text-align:center colspan="2">
-              <input type="button" value="Add" id="saveButton">
+              <input type="button" class="button action_button" value="Add" id="saveButton">
             </td>
           </tr>
         </tbody>
       </table>
-      <div id="errors" style="visibility: hidden;">
-        <font size="1" color="red">1. Invaild hostname is present. Sample hostnames are google.com or github.com</font>
-        <font size="1" color="red">2. Make sure that the multiple Identifiers are separated by a semicolon. To get an identifier, open the Elements Section in the Inspect panel, right click on the element to hide, click on the `Copy Selector` present in the `Copy` Options</font>
+      <div id="errors" style="display: none;">
+        <font size="1" color="red">1. Invaild hostname is present. Sample hostnames are google.com or images.saasworthy.com</font>
+        <br/>
+        <font size="1" color="red" style="margin-top: 10px">2. Make sure that the multiple Identifiers are separated by a semicolon. To get an identifier, open the Elements Section present in the Inspect panel(F12), right click on the element(which you want to hide), click on the `Copy Selector` present in the `Copy` Option. The selector text will be automatically copied to the clipboard.</font>
+        <br/>
+        <font size="1" color="red" style="margin-top: 10px">3. Sample Host/Identifier</font>
+        <br/>
+        <font size="1" color="red" style="margin-top: 10px">________________________</font>
+        <br/>
+        <font size="1" color="red" style="margin-top: 10px">google.com | #hplogo</font>
+        <br/>
+        <font size="1" color="red" style="margin-top: 10px">________________________</font>
       </div>
     </div>
     
-    <input type="button" value="Show All" id="showAllButton">
+    <input type="button" class="button action_button" value="Show All" id="showAllButton" title="Generates a table below containing all the host-selectors entries present.">
+    <input type="button" class="button action_button" value="Clear" id="clearAllButton" title="Clear the table layout, no chnages with data is done.">
     <button id="changeColor"></button>
     <script src="popup.js"></script>
   </body>
