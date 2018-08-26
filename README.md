@@ -4,8 +4,9 @@ Chrome Extension for Removing unwanted elements from a webpage
 <a href="https://chrome.google.com/webstore/detail/anyremove/bgojehfflbfcifmjionkmknmffkimmkp">Extension Link</a>
 <br/>
 <h4>How to use:</h4>
-<ol>
+<ul>
 <li>
+ 1.
 <img src="https://github.com/pallavJha/AnyRemove/raw/master/overview-images/rsz_1.png"/>
 </li>
 <li>
@@ -26,4 +27,4 @@ Chrome Extension for Removing unwanted elements from a webpage
 <li>  
 <img src="https://github.com/pallavJha/AnyRemove/raw/master/overview-images/rsz_7.png"/>
 </li>
-</ol>
+</ul>
