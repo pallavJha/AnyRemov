@@ -2,6 +2,22 @@
 <html>
   <head>
     <style>
+    body {
+    min-width:300px;
+    }
+    table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+    td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    }
+    tr:nth-child(even) {
+    border: 0px solid #dddddd;
+    }
     button {
     height: 30px;
     width: 30px;
@@ -9,7 +25,36 @@
     }
     </style>
   </head>
-  <body>
+  <body id="body">
+    <div>
+      <table align="center">
+        <thead>
+          <th>Host</th>
+          <th>Identifier(';' Separated)</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="text" value="" id="host">
+            </td>
+            <td>
+              <input type="text" value="" id="selectors">
+            </td>
+          </tr>
+          <tr>
+            <td text-align:center colspan="2">
+              <input type="button" value="Add" id="saveButton">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="errors" style="visibility: hidden;">
+        <font size="1" color="red">1. Invaild hostname is present. Sample hostnames are google.com or github.com</font>
+        <font size="1" color="red">2. Make sure that the multiple Identifiers are separated by a semicolon. To get an identifier, open the Elements Section in the Inspect panel, right click on the element to hide, click on the `Copy Selector` present in the `Copy` Options</font>
+      </div>
+    </div>
+    
+    <input type="button" value="Show All" id="showAllButton">
     <button id="changeColor"></button>
     <script src="popup.js"></script>
   </body>
